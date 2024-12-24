@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
 </head>
 <body>
-    
+  <!-- Header Section -->
+  <header class="main-header">
+    <h1>AI Chatbot</h1>
+    <div class="main-feature">
+      <img src="robot.jpg" alt="Chatbot" class="chatbot-icon">
+      <button onclick="startChat()" class="start-chat-btn">Start Chat</button>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature">
+      <h2>Quick Assistance</h2>
+      <p>Instant support for all your queries.</p>
+      <button class="feature-btn">Start Chat</button>
+    </div>
+    <div class="feature">
+      <h2>Smart Assistance</h2>
+      <p>Automate tasks intelligently with our chatbot.</p>
+      <button class="feature-btn">Smart Chat</button>
+    </div>
+    <div class="feature">
+      <h2>Secure and Reliable</h2>
+      <p>Stay secure with our advanced systems.</p>
+      <button class="feature-btn">Copy Text</button>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2024 AI Chatbot Inc. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Función para el botón de "Start Chat"
+    function startChat() {
+      // Mensaje o redirección
+      alert("Starting the chat!");
+      // Redirección a una nueva página llamada 'chat.html'
+      window.location.href = "chat.html";
+    }
+  </script>
 </body>
 </html>
+
+
+
