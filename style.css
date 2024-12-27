@@ -1,5 +1,5 @@
 /* General Reset */
-* {
+*body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
   }
   
   body {
-    background-color: #2e2e38;
+    background-color: #161624;
     color: #fff;
     text-align: center;
   }
@@ -75,12 +75,12 @@
   
   .feature h2 {
     font-size: 1.5rem;
-    color: #00e6ff;
+    color: #d5e1e2;
     margin-bottom: 15px;
   }
   
   .feature p {
-    color: #ccc;
+    color: #eef2f7;
     margin-bottom: 15px;
   }
   
@@ -219,7 +219,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #f3f4f6;
+    background: #070914;
   }
   
   #chat-container {
@@ -237,7 +237,6 @@ body {
     border-bottom: 1px solid #ddd;
   }
   
-  .user-message,
   .bot-message {
     margin: 10px 0;
     padding: 10px;
