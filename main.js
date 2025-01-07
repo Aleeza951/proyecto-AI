@@ -41,6 +41,5 @@ async function sendMessage() {
     }
   
     chatWindow.scrollTop = chatWindow.scrollHeight;
-  }
-  
+  }  
   
