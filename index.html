@@ -8,56 +8,87 @@
   <script src="main.js"></script>
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="main-header">
-    <h1>AI Chatbot</h1>
-    <div class="main-feature">
-      <img src="robot.jpg" alt="Chatbot" class="chatbot-icon">
-      <button onclick="startChat()" class="start-chat-btn">Start Chat</button>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="image">
+      <!-- Al hacer clic en la imagen se activa la animación -->
+      <img src="robot.jpg" alt="robot.jpg" >
     </div>
-   </header>
-  
-  <!-- Features Section -->
-   <div class="menu"></div>
-   <nav>
-    <ul>
-      <li><a href="quick assistance.html"></a></li>
-    </ul>
-   </nav>
-  <section class="features">
-    <div class="feature">
+    <h1>Bienvenido al AI Chatbot</h1>
+    <p>Tu asistente virtual inteligente siempre a tu disposición.</p>
+  </header>
+
+  <!-- Secciones de la página -->
+  <div class="features">
+    <section class="feature" onclick="window.location.href='quick_assistance.html';">
       <h2>Quick Assistance</h2>
-      <p>Instant support for all your queries.</p>
-      <button class="feature-btn">&#128070</button>
-    </div>
-    <div class="feature">
+      <p>Recibe ayuda instantánea para cualquier consulta.</p>
+    </section>
+    <section class="feature" onclick="window.location.href='smart_assistance.html';">
       <h2>Smart Assistance</h2>
-      <p>Automate tasks intelligently with our chatbot.</p>
-      <button class="feature-btn">&#128489</button>
-    </div>
-    <div class="feature">
+      <p>Automatiza tareas con nuestro chatbot inteligente.</p>
+    </section>
+    <section class="feature" onclick="window.location.href='secure_and_reliable.html';">
       <h2>Secure and Reliable</h2>
-      <p>Stay secure with our advanced systems.</p>
-      <button class="feature-btn">Copy Text</button>
+      <p>Mantén la seguridad y privacidad en todas las interacciones.</p>
+    </section>
+  </div>
+
+  <!-- Botón Start Chat -->
+<div class="start-chat-container">
+  <button class="start-chat-btn" onclick="window.location.href='chat.html'">Start Chat</button>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>AI Chatbot</h3>
+        <p>&copy; 2024 AI Chatbot Inc. All rights reserved.</p>
+      </div>
+  
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms &and Conditions</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="https://www.twitter.com">Twitter</a></li>
+          <li><a href="https://www.facebook.com">Facebook</a></li>
+          <li><a href="https://www.instagram.com">Instagram</a></li>
+          <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
-  </section>
-
-
-  <footer>
-    <p>&copy; 2024 AI Chatbot Inc. All rights reserved.</p>
+    <div class="footer-bottom">
+      <p>&copy; 2024 AI Chatbot. All Rights Reserved. Designed by Your Name.</p>
+    </div>
   </footer>
-
+  
   <script>
-    // Función para el botón de "Start Chat"
-    function startChat() {
-      // Mensaje o redirección
-      alert("Starting the chat!");
-      // Redirección a una nueva página llamada 'chat.html'
-      window.location.href = "chat.html";
+    // Función de animación para la imagen
+    function animateImage() {
+      const img = document.getElementById("chatbotImage");
+      img.style.transition = "transform 0.5s";
+      img.style.transform = "scale(1.2)";
+      setTimeout(() => {
+        img.style.transform = "scale(1)";
+      }, 500);
     }
   </script>
 </body>
 </html>
+
+
 
 
 
