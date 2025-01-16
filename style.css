@@ -1,204 +1,129 @@
-/* Estilos básicos */
-* {
+/* General styling */
+body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #f4f7fc;
+  color: #333;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #F4F4F4; /* Color de fondo claro */
-  color: #333333; /* Color de texto oscuro */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-
-
-
-
-/* Estilos del Header */
+/* Styling header */
 .header {
-  display: flex;
-  flex-direction: column; /* Apilar los elementos en una columna */
-  justify-content: center; /* Centrar verticalmente */
-  align-items: center; /* Centrar horizontalmente */
-  text-align: center;
-  height: 100vh; /* 100% de la altura de la ventana */
-  padding: 40px 20px; /* Relleno alrededor del contenido */
-  background: linear-gradient(135deg, #2D3A3F, #4f5d62); /* Fondo degradado */
+  background: #005f73; /* Deep blue */
   color: white;
-  width: 100%;
+  text-align: center;
+  padding: 2em 1em;
 }
 
-/* Imagen */
-.header .image img {
-  width: 150px; /* Tamaño de la imagen */
+.header img {
+  width: 150px;
   height: auto;
-  border-radius: 50%; /* Imagen circular */
-  margin-bottom: 20px; /* Separación con el título */
-  border: 3px solid #fff; /* Borde blanco */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  cursor: pointer; /* Make the image clickable */
 }
 
-/* Animación al pasar el mouse sobre la imagen */
-.header .image img:hover {
-  transform: scale(1.2) rotate(10deg); /* La imagen crece y rota */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
-}
-
-/* Estilo para el título */
-.header h1 {
-  font-size: 3rem; /* Fuente grande */
-  margin-bottom: 10px; /* Separación inferior */
+.header h1  {
+  font-size: 3rem;
+  margin-bottom: 10px;
   font-weight: bold;
-  letter-spacing: 2px; /* Espaciado entre letras */
+  letter-spacing: 2px;
   transition: color 0.3s ease;
 }
 
 .header:hover h1 {
-  color: #f0c040;  /*cambia clor cuando hay tiene arrow */
+  color: #f0c040;
+}
+.header:hover p {
+  color: #f0c040;
+}
+
+/* Add CSS for robot image hover animation */
+.image img {
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+}
+
+/* Zoom in animation when hovered over */
+.image img:hover {
+  transform: scale(1.1); /* Slightly increase the size */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); /* Add shadow for effect */
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
-header p {
-  font-size: 1rem;
-  margin-top: 10px;
-  font-weight: lighter;
-  color: white;
+p {
+  font-size: 1.2em;
+  margin-top: 0.5em;
 }
 
-/* Secciones */
+/* Section for features */
 .features {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 2em;
 }
 
 .feature {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  width: 250px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-}
-
-/* Hover para las secciones */
-.feature:hover {
-  transform: translateY(-10px);
-  background-color: #E5F9FF; /* Un toque de azul claro al hacer hover */
-}
-
-.feature h2 {
-  font-size: 1.4rem;
-  color: #333;
-}
-
-.feature p {
-  font-size: 1rem;
-  color: #666;
-}
-/* Contenedor del botón para darle formato y espaciado */
-.start-chat-container {
+  background: #ffffff;
+  padding: 2em;
   text-align: center;
-  margin-top: 50px; /* Espacio entre las secciones y el botón */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-
-/* Efecto al pasar el ratón sobre el botón */
-.start-chat-btn:hover {
-  background-color: #1A8A77; /* Color cuando el ratón pasa por encima */
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* General Styles */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%; /* Necesario para que el footer se ajuste al final */
+.feature img {
+  width: 60px;
+  margin-bottom: 15px;
 }
 
-body {
-  display: flex;
-  flex-direction: column; /* Coloca los elementos en una columna */
-  min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la pantalla */
-}
-
-.main-content {
-  flex: 1; /* Toma el espacio disponible entre el header y footer */
-}
-
-
-/* Contenedor para centrar el contenido */
-.start-chat-container {
-  display: flex;
-  justify-content: center; /* Centrado horizontal */
-  align-items: center;     /* Centrado vertical */
-  height: 100vh;           /* Hace que el contenedor ocupe toda la pantalla */
-  margin: 0;               /* Elimina márgenes que puedan afectar el centrado */
-}
-
-/* Estilos del botón */
+/* Button styles */
 .start-chat-btn {
-  background-color: #00A4CC; /* Color del botón */
-  color: white; /* Color del texto */
-  padding: 15px 30px; /* Tamaño del botón */
-  font-size: 1.2rem; /* Tamaño de la fuente */
-  font-weight: bold;
+  background-color: #00aaff;
+  color: white;
+  padding: 15px 30px;
   border: none;
-  border-radius: 5px; /* Bordes redondeados */
-  transition: background-color 0.3s ease; /* Transición suave */
-  width: 200px; /* Ajustar ancho */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
 }
-
 
 .start-chat-btn:hover {
-  background-color: #008C9E;  /* Cambio de color al pasar el mouse */
+  background-color: #0088cc;
 }
 
-
-
-/* Asegura que el footer no toque las otras secciones */
-footer {
-  padding-top: 20px;
-}
-/* Estilos del footer */
+/* Footer */
 .footer {
-  background-color: #2D3A3F; /* Fondo oscuro para dar contraste */
-  color: white; /* Texto blanco para que destaque sobre el fondo */
-  padding: 40px 0; /* Espaciado alrededor del footer */
-  font-size: 1rem;
-  width: 100%;
-  height: 35%;
+  background-color: #333;
+  color: white;
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
 }
 
 .footer-content {
-  display: flex; /* Para alinear las secciones en fila */
+  display: flex;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto; /* Centrar el contenido */
+  flex-wrap: wrap;
 }
 
 .footer-section {
   flex: 1;
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 .footer-section h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #00A4CC; /* Color para los encabezados */
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
@@ -208,39 +133,52 @@ footer {
 }
 
 .footer-section ul li {
-  margin-bottom: 8px;
+  margin: 5px 0;
 }
 
 .footer-section ul li a {
-  text-decoration: none;
   color: white;
-  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .footer-section ul li a:hover {
-  color: #00A4CC; /* Cambio de color al pasar el mouse */
+  text-decoration: underline;
 }
 
 .footer-bottom {
   text-align: center;
-  margin-top: 30px;
-  font-size: 0.9rem;
-  color: #b8b8b8; /* Gris claro para el texto inferior */
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 .footer-bottom p {
-  margin: 0;
+  margin: 5px;
+  color: white;
 }
 
 
-/* Estilo para pantallas pequeñas */
+/* Apply animation on image */
+.image img {
+  animation: robotAnimation 5s infinite; /* 5 seconds duration, repeats forever */
+}
+
+
+/* Add mobile responsive design */
 @media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
+  .features {
+      grid-template-columns: 1fr;
   }
 
-  .footer-section {
-    margin-bottom: 20px;
+  .header h1 {
+      font-size: 1.8em;
+  }
+
+  .header p {
+      font-size: 1em;
+  }
+
+  .footer-bottom {
+      font-size: 0.8em;
   }
 }
+
