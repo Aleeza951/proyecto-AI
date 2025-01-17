@@ -13,6 +13,7 @@ body {
   color: white;
   text-align: center;
   padding: 2em 1em;
+  width: 100%;
 }
 
 .header img {
@@ -135,7 +136,7 @@ p {
 
 .footer-section {
   flex: 1;
-  margin: 0 20px;
+  margin:  20px;
 }
 
 .footer-section h3 {
@@ -295,5 +296,143 @@ body {
   background-color: #ccc;
   border-radius: 4px;
 }
-/*quick assistance pagina*/
 
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #333;
+  color: white;
+  font-size: 0.9em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Estilo para la página de Quick Assistance */
+.header {
+  background-color: #2196F3;
+  color: white;
+  text-align: center;
+  padding: 2em;
+}
+
+.main-content {
+  text-align: center;
+  padding: 2em;
+  font-family: Arial, sans-serif;
+}
+
+.main-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+.main-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-content ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.go-back-container {
+  margin-top: 2em;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #0088cc;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+
+/* smart assitance*/
+/* Estilo para la página de Smart Assistance */
+.header {
+  background-color: #005f73;
+  color: white;
+  text-align: center;
+  padding: 2em;
+}
+
+.main-content {
+  text-align: center;
+  padding: 2em;
+  font-family: Arial, sans-serif;
+}
+
+.main-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+.main-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-content ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.go-back-container {
+  margin-top: 2em;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #0088cc;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
