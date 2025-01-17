@@ -3,61 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Chat Page</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
+  <title>Chat Page</title>
+  <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-  <header class="chat-header">
-    <h1>AI Chat Assistant</h1>
-  </header>
+  <!-- Chat Header -->
+  <div class="chat-header">
+    AI Chat Assistant
+  </div>
 
-  <main class="chat-container">
-    <!-- Chat Window -->
-    <div class="chat-window" id="chat-window">
-      <!-- Ejemplo de mensajes iniciales -->
-      <div class="message bot-message">Hello! I'm your AI assistant. How can I help you today?</div>
-    </div>
+  <!-- Chat Container -->
+  <div class="chat-container" id="chatContainer">
+    <!-- Mensaje inicial del bot -->
+    <div class="message bot">Hello! How can I assist you today?</div>
+  </div>
 
-    <!-- Input Box -->
-    <div class="chat-input">
-      <input type="text" id="userInput" placeholder="Type your question here..." />
-      <button onclick="sendMessage()">Send</button>
-    </div>
-  </main>
+  <!-- Input Area -->
+  <div class="input-container">
+    <input type="text" id="messageInput" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
 
-  <footer>
-    <p>&copy; 2024 AI Chatbot. All rights reserved.</p>
-  </footer>
-
+  <!-- Script para manejar interacciones -->
   <script>
-    // Simulación de interacción con un chatbot
     function sendMessage() {
-      const input = document.getElementById("userInput");
-      const chatWindow = document.getElementById("chat-window");
+      const input = document.getElementById("messageInput");
+      const chatContainer = document.getElementById("chatContainer");
 
-      if (input.value.trim() !== "") {
-        // Añadir mensaje del usuario
-        const userMessage = document.createElement("div");
-        userMessage.classList.add("message", "user-message");
-        userMessage.textContent = input.value;
-        chatWindow.appendChild(userMessage);
+      // Obtener el mensaje del usuario
+      const userMessage = input.value.trim();
+      if (userMessage === "") return; // Evitar mensajes vacíos
 
-        // Simular respuesta de AI
-        const botMessage = document.createElement("div");
-        botMessage.classList.add("message", "bot-message");
-        botMessage.textContent = "I'm sorry, but I'm just a demo AI. How can I assist you further?";
-        setTimeout(() => {
-          chatWindow.appendChild(botMessage);
-          chatWindow.scrollTop = chatWindow.scrollHeight; // Hacer scroll al final del chat
-        }, 1000);
+      // Crear el mensaje del usuario y agregarlo al contenedor
+      const userMessageElement = document.createElement("div");
+      userMessageElement.className = "message user";
+      userMessageElement.textContent = userMessage;
+      chatContainer.appendChild(userMessageElement);
 
-        // Limpiar input
-        input.value = "";
-      }
+      // Desplazar la vista hacia el último mensaje
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+
+      // Limpiar el campo de entrada
+      input.value = "";
+
+      // Simular respuesta del bot con un retraso
+      setTimeout(() => {
+        const botMessageElement = document.createElement("div");
+        botMessageElement.className = "message bot";
+        botMessageElement.textContent = "I'm here to help! Could you provide more details?";
+        chatContainer.appendChild(botMessageElement);
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }, 1000);
     }
   </script>
 </body>
 </html>
-
 
