@@ -7,5 +7,12 @@ document.querySelector(".header img").addEventListener("click", () => {
     img.style.transform = "scale(1)";
   }, 500);
 });
+function animateImage(element) {
+  element.querySelector('img').style.transform = 'scale(1.2)';
+}
+
+function resetImage(element) {
+  element.querySelector('img').style.transform = 'scale(1)';
+}
 
 

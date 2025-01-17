@@ -38,6 +38,9 @@ body {
 .header:hover p {
   color: #f0c040;
 }
+.image img {
+  transition: transform 0.3s ease;
+}
 
 /* Add CSS for robot image hover animation */
 .image img {
@@ -120,59 +123,6 @@ p {
   background-color: #0088cc;
 }
 
-/* Footer */
-.footer {
-  background-color: #333;
-  color: white;
-  padding: 30px 0;
-  font-family: Arial, sans-serif;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer-section {
-  flex: 1;
-  margin:  20px;
-}
-
-.footer-section h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin: 5px 0;
-}
-
-.footer-section ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-}
-
-.footer-bottom p {
-  margin: 5px;
-  color: white;
-}
-
 
 /* Apply animation on image */
 .image img {
@@ -180,24 +130,6 @@ p {
 }
 
 
-/* Add mobile responsive design */
-@media (max-width: 768px) {
-  .features {
-      grid-template-columns: 1fr;
-  }
-
-  .header h1 {
-      font-size: 1.8em;
-  }
-
-  .header p {
-      font-size: 1em;
-  }
-
-  .footer-bottom {
-      font-size: 0.8em;
-  }
-}
 
 /*chat container*/
 
@@ -304,8 +236,102 @@ body {
   padding: 20px;
   margin-top: 40px;
 }
+/*FAQ*/
 
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8; /* Light background */
+  color: #333;
+  line-height: 1.6;
+}
 
+/* Header Styles */
+.header {
+  background-color: #005f73; /* Dark blue */
+  color: white;
+  text-align: center;
+  padding: 2em;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+/* FAQ Content Styles */
+.main-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.main-content h2 {
+  text-align: center;
+  color: #005f73; /* Dark blue */
+  font-size: 2rem;
+  margin-bottom: 1.5em;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin:  20px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 5px;
+  color: white;
+}
 /* Footer Section */
 .footer {
   text-align: center;
@@ -317,6 +343,25 @@ body {
   bottom: 0;
   width: 100%;
 }
+/* Add mobile responsive design */
+@media (max-width: 768px) {
+  .features {
+      grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+      font-size: 1.8em;
+  }
+
+  .header p {
+      font-size: 1em;
+  }
+
+  .footer-bottom {
+      font-size: 0.8em;
+  }
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -325,114 +370,4 @@ body {
     align-items: center;
   }
 }
-/* Estilo para la página de Quick Assistance */
-.header {
-  background-color: #2196F3;
-  color: white;
-  text-align: center;
-  padding: 2em;
-}
 
-.main-content {
-  text-align: center;
-  padding: 2em;
-  font-family: Arial, sans-serif;
-}
-
-.main-content h2 {
-  font-size: 2rem;
-  margin-bottom: 1em;
-}
-
-.main-content ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.main-content ul li {
-  font-size: 1.2rem;
-  margin: 10px 0;
-}
-
-.go-back-container {
-  margin-top: 2em;
-}
-
-.back-btn {
-  padding: 10px 20px;
-  background-color: #00aaff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.back-btn:hover {
-  background-color: #0088cc;
-}
-
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-
-/* smart assitance*/
-/* Estilo para la página de Smart Assistance */
-.header {
-  background-color: #005f73;
-  color: white;
-  text-align: center;
-  padding: 2em;
-}
-
-.main-content {
-  text-align: center;
-  padding: 2em;
-  font-family: Arial, sans-serif;
-}
-
-.main-content h2 {
-  font-size: 2rem;
-  margin-bottom: 1em;
-}
-
-.main-content ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.main-content ul li {
-  font-size: 1.2rem;
-  margin: 10px 0;
-}
-
-.go-back-container {
-  margin-top: 2em;
-}
-
-.back-btn {
-  padding: 10px 20px;
-  background-color: #00aaff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.back-btn:hover {
-  background-color: #0088cc;
-}
-
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
