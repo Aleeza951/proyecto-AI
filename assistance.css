@@ -1,0 +1,181 @@
+/* Reset de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan dentro del tamaño total */
+}
+
+.header {
+    background-color: #005f73; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    padding: 2em; /* Espaciado interno */
+    width: 100%; /* Asegura que cubra todo el ancho */
+    height: 20vh; /* Hace que ocupe toda la altura de la ventana */
+    position: relative; /* Asegura que el header no se desplace o afecte a otros elementos */
+    top: 0;
+    left: 0; /* Asegura que el header empiece desde la esquina superior izquierda */
+}
+
+body, html {
+    margin: 0; /* Eliminar margen por defecto */
+    padding: 0; /* Eliminar padding por defecto */
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    overflow-x: hidden; /* Evitar desplazamiento horizontal si hay desbordamiento */
+}
+
+  .main-content {
+    text-align: center;
+    padding: 2em;
+    font-family: Arial, sans-serif;
+  }
+  
+  .main-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+  }
+  
+  .main-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .main-content ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .go-back-container {
+    margin-top: 2em;
+  }
+  
+  .back-btn {
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back-btn:hover {
+    background-color: #0088cc;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin:  20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .footer-bottom p {
+    margin: 5px;
+    color: white;
+  }
+  /* Footer Section */
+.footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .footer-content {
+          flex-direction: column;
+          text-align: center;
+        }
+        .footer-section {
+          margin: 15px 0;
+        }
+      }
+      /* Add mobile responsive design */
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+  
+    .header h1 {
+        font-size: 1.8em;
+    }
+  
+    .header p {
+        font-size: 1em;
+    }
+  
+    .footer-bottom {
+        font-size: 0.8em;
+    }
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Assistance - FAQs</title>
+  <link rel="stylesheet" href="faq.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>FAQs</h1>
+    <p>Quick Assistance: Your questions answered.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h2>Frequently Asked Questions</h2>
+    <ul class="faq-list">
+      <li onclick="toggleFaq(event)">
+        <h3>What is Quick Assistance?</h3>
+        <p>Quick Assistance is a platform to help you resolve issues and get access to resources instantly and efficiently.</p>
+      </li>
+      <li onclick="toggleFaq(event)">
+        <h3>How does it work?</h3>
+        <p>Simply explore options like FAQs, Live Chat, or Resources, and interact with them to get the help you need.</p>
+      </li>
+      <li onclick="toggleFaq(event)">
+        <h3>Is it free?</h3>
+        <p>Yes, Quick Assistance is a free service available for all users.</p>
+      </li>
+      <li onclick="toggleFaq(event)">
+        <h3>Can I get personal help?</h3>
+        <p>Yes, connect with us via Live Chat for personalized assistance tailored to your issues.</p>
+      </li>
+    </ul>
+    <div class="go-back-container">
+      <button class="back-btn" onclick="window.location.href='index.html'">Go Back</button>
+    </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>AI Chatbot</h3>
+        <p>&copy; 2024 AI Chatbot Inc. All rights reserved.</p>
+      </div>
+  
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms &and Conditions</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+            <li><a href="https://www.twitter.com">🐦 Twitter</a></li>
+            <li><a href="https://www.facebook.com">📘 Facebook</a></li>
+            <li><a href="https://www.instagram.com">📸 Instagram</a></li>
+            <li><a href="https://www.linkedin.com">🔗 LinkedIn</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 AI Chatbot. All Rights Reserved.</p>
+      <p>Designed by ❤ ALEEZA SAJID</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFaq(event) {
+      const faqItem = event.currentTarget;
+      faqItem.classList.toggle('active');
+    }
+  </script>
+  </main>
+</body>
+</html>

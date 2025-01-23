@@ -343,6 +343,7 @@ body {
   bottom: 0;
   width: 100%;
 }
+
 /* Add mobile responsive design */
 @media (max-width: 768px) {
   .features {

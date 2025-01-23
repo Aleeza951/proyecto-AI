@@ -22,6 +22,7 @@
   <div class="input-container">
     <input type="text" id="messageInput" placeholder="Type your message...">
     <button onclick="sendMessage()">Send</button>
+    <button onclick="startVoiceInput()">🎤 Speak</button>
   </div>
 
   <!-- Script para manejar interacciones -->
@@ -54,6 +55,33 @@
         chatContainer.appendChild(botMessageElement);
         chatContainer.scrollTop = chatContainer.scrollHeight;
       }, 1000);
+    }
+        // Iniciar entrada de voz (reconocimiento de voz)
+        function startVoiceInput() {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = "en-US"; // Configurar idioma inglés
+
+      recognition.start();
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript; // Obtener el texto reconocido
+        document.getElementById("messageInput").value = transcript;
+        sendMessage(); // Enviar automáticamente el mensaje
+      };
+
+      recognition.onerror = (error) => {
+        alert("Error in voice input: " + error.error); // Manejo de errores
+      };
+    }
+
+    // Convertir texto a voz (síntesis de voz)
+    function speakText(text) {
+      const speech = new SpeechSynthesisUtterance();
+      speech.text = text;
+      speech.lang = "en-US"; // Configurar idioma inglés
+      speech.pitch = 1;
+      speech.rate = 1;
+      window.speechSynthesis.speak(speech);
     }
   </script>
 </body>
