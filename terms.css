@@ -1,0 +1,115 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Fondo suave para resaltar el contenido */
+    color: #333;
+  }
+  
+  /* Cabecera */
+  header {
+    background-color: #005f73; /* Color principal */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+  }
+  
+  header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: 300;
+  }
+  
+  /* Contenido principal */
+  .terms-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  /* Secciones de términos */
+  .terms-section {
+    width: 75%;
+    background-color: white;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 5px solid #005f73;
+  }
+  
+  .terms-section:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+  }
+  
+  .terms-section h2 {
+    color: #005f73;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .terms-section p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: 300;
+  }
+  
+  /* Estilos para el pie de página (footer) */
+  footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 300;
+  }
+  
+  /* Enlaces en el footer */
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .terms-section {
+      width: 90%;
+    }
+  
+    header h1 {
+      font-size: 2.5em;
+    }
+  
+    header p {
+      font-size: 1.1em;
+    }
+  }
+  

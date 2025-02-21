@@ -1,0 +1,115 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9f4f4; /* Fondo suave para todo el sitio */
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    background-color: #005f73; /* Color principal */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+  }
+  
+  header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  
+  /* Secciones principales de privacidad */
+  .privacy-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  .privacy-section {
+    width: 80%;
+    background-color: white;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 5px solid #005f73;
+  }
+  
+  .privacy-section:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+  }
+  
+  .privacy-section h2 {
+    color: #005f73;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .privacy-section p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: 300;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #005f73; /* Mismo color para el pie de página */
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 300;
+  }
+  
+  /* Estilo para los enlaces dentro del footer */
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .privacy-section {
+      width: 90%;
+    }
+  
+    header h1 {
+      font-size: 2.5em;
+    }
+  
+    header p {
+      font-size: 1.1em;
+    }
+  }
+  
