@@ -15,14 +15,57 @@ body {
   main {
     flex-grow: 1; /* Empuja el contenido principal para que ocupe espacio */
   }
+/* Header */
 .header {
-    background-color: #005f73;
-    color: white;
-    text-align: center;
-    padding: 2em;
-    width: 100%;
+  background: linear-gradient(135deg, #006d77, #83c5be); /* Gradiente atractivo */
+  color: white;
+  text-align: center;
+  padding: 5em 1.5em; /* Espaciado más amplio */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  animation: fadeInHeader 1.5s ease-in-out; /* Animación al cargar */
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  animation: fadeInText 1.5s ease-in-out;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  opacity: 0.9;
+  animation: fadeInText 1.7s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeInHeader {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
   .main-content {
     text-align: center;
     padding: 2em;

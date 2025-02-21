@@ -1,67 +1,75 @@
-/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* Fuentes y base */
 body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(120deg, #f0f4f8, #d9e7ff);
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(120deg, #e2f3f5, #ffffff);
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Header */
 .header {
   text-align: center;
-  padding: 50px 20px;
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 60px 20px;
+  background: #2c3e50;
+  color: white;
+  border-bottom: 5px solid #3498db;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .header h1 {
-  font-size: 36px;
-  color: #4a90e2;
+  font-size: 3rem;
   margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease-out;
 }
 
 .header p {
-  font-size: 18px;
-  color: #555;
+  font-size: 1.2rem;
+  color: #ecf0f1;
 }
 
-.image {
-  display: inline-block;
-  margin-bottom: 20px;
-}
 
+/* Imagen del chatbot */
 #chatbotImage {
-  width: 150px;
+  width: 180px;
   border-radius: 50%;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 6px solid #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 #chatbotImage:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Features Section */
 .features {
   display: flex;
   justify-content: space-around;
-  margin: 40px 0;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 40px 10px;
 }
 
 .feature {
   background: #fff;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  width: 25%;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 28%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .feature img {
@@ -72,10 +80,12 @@ body {
 .feature h2 {
   font-size: 24px;
   color: #4a90e2;
+  font-weight: 500;
 }
 
 .feature p {
   color: #777;
+  font-size: 16px;
 }
 
 .feature:hover {
@@ -97,11 +107,14 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  bottom: 1.5rem;
 }
 
 .start-chat-btn:hover {
   background-color: #357ab7;
+  transform: scale(1.05); /* Añadir un pequeño zoom */
 }
 
 /* Footer */
@@ -125,6 +138,7 @@ body {
 .footer-section h3 {
   font-size: 20px;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .footer-section ul {
@@ -160,6 +174,15 @@ body {
   .feature {
     width: 80%;
     margin-bottom: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
   }
 }
 

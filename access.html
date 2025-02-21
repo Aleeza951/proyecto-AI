@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accesiblidad.css">
+    <title>Accesibilidad</title>
+</head>
+<body>
+
+<!-- Modal de accesibilidad -->
+<div id="accessibility" class="accessibility-section" role="dialog" aria-labelledby="accessibility-title" aria-hidden="true">
+    <h2 id="accessibility-title">Opciones de Accesibilidad</h2>
+    <p>Esta página tiene características para mejorar la experiencia de accesibilidad:</p>
+    <ul>
+      <li><strong>Contraste Alto:</strong> Opción para cambiar al modo de alto contraste.</li>
+      <li><strong>Ajustar tamaño de fuente:</strong> Aumenta o disminuye el tamaño de la fuente para facilitar la lectura.</li>
+      <li><strong>Navegación por teclado:</strong> Navega por la página usando solo el teclado.</li>
+      <li><strong>Lectores de pantalla:</strong> Compatible con lectores de pantalla para personas con discapacidades visuales.</li>
+    </ul>
+    <button class="close-accessibility" onclick="closeAccessibility()">Cerrar</button>
+</div>
+
+<!-- Enlace de accesibilidad en el footer -->
+<footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2024 AI Chatbot. All Rights Reserved.</p>
+      <p>Designed by ❤ ALEEZA SAJID</p>
+      <a href="javascript:void(0)" class="accessibility-link" onclick="openAccessibility()" aria-label="Abrir opciones de accesibilidad">Accesibilidad</a>
+    </div>
+</footer>
+
+<script>
+// Abre el modal de accesibilidad
+function openAccessibility() {
+  document.getElementById('accessibility').style.display = 'block';
+  document.getElementById('accessibility').setAttribute('aria-hidden', 'false');
+  document.querySelector('.close-accessibility').focus();
+}
+
+// Cierra el modal de accesibilidad
+function closeAccessibility() {
+  document.getElementById('accessibility').style.display = 'none';
+  document.getElementById('accessibility').setAttribute('aria-hidden', 'true');
+  document.querySelector('.accessibility-link').focus();
+}
+
+// Cerrar con tecla Esc
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && document.getElementById('accessibility').style.display === 'block') {
+    closeAccessibility();
+  }
+});
+</script>
+
+</body>
+</html>

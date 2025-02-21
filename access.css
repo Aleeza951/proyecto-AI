@@ -1,0 +1,58 @@
+/* Estilos para la sección de accesibilidad */
+.accessibility-section {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    z-index: 999;
+    overflow: auto;
+  }
+  
+  .accessibility-section h2 {
+    font-size: 2em;
+  }
+  
+  .accessibility-section ul {
+    list-style-type: none;
+  }
+  
+  .accessibility-section button {
+    padding: 10px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .accessibility-section button:hover {
+    background-color: #0088cc;
+  }
+  
+  /* Enlace de accesibilidad */
+  .accessibility-link {
+    color: #00aaff;
+    cursor: pointer;
+  }
+  
+  .accessibility-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Modo de alto contraste */
+  .high-contrast {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Ajuste dinámico del tamaño de la fuente */
+  .font-large {
+    font-size: 1.2em;
+  }
+  
