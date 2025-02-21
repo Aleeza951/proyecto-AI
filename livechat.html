@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Chat - Quick Assistance</title>
+  <link rel="stylesheet" href="livechat.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Live Chat</h1>
+    <p>Conéctate con nuestro equipo de soporte para obtener ayuda personalizada.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="chat-container">
+      <h2>Estamos aquí para ayudarte</h2>
+      <div class="chat-box">
+        <div class="chat-header">
+          <h3>Soporte en vivo</h3>
+        </div>
+        <div class="chat-messages">
+          <div class="message bot-message">
+            <p><strong>Bot:</strong> Hola, ¿en qué puedo ayudarte hoy?</p>
+          </div>
+        </div>
+        <div class="chat-input">
+          <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+          <button id="send-btn" onclick="sendMessage()">Enviar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Button to Go Back -->
+    <div class="go-back-container">
+      <button class="back-btn" onclick="window.location.href='index.html'">Regresar</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>AI Chatbot</h3>
+        <p>&copy; 2024 AI Chatbot Inc. Todos los derechos reservados.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="/home">Inicio</a></li>
+          <li><a href="/contact">Contáctanos</a></li>
+          <li><a href="/privacy">Política de Privacidad</a></li>
+          <li><a href="/terms">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <ul>
+          <li><a href="https://www.twitter.com">🐦 Twitter</a></li>
+          <li><a href="https://www.facebook.com">📘 Facebook</a></li>
+          <li><a href="https://www.instagram.com">📸 Instagram</a></li>
+          <li><a href="https://www.linkedin.com">🔗 LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 AI Chatbot. Todos los derechos reservados.</p>
+      <p>Diseñado por ❤ ALEEZA SAJID</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Function to send messages
+    function sendMessage() {
+      const userInput = document.getElementById("user-input").value;
+      if (userInput.trim() !== "") {
+        const messageContainer = document.createElement("div");
+        messageContainer.classList.add("message");
+        messageContainer.classList.add("user-message");
+        messageContainer.innerHTML = `<p><strong>Tú:</strong> ${userInput}</p>`;
+        document.querySelector(".chat-messages").appendChild(messageContainer);
+        
+        // Clear input field
+        document.getElementById("user-input").value = "";
+        
+        // Simulate bot reply
+        setTimeout(() => {
+          const botReply = document.createElement("div");
+          botReply.classList.add("message");
+          botReply.classList.add("bot-message");
+          botReply.innerHTML = `<p><strong>Bot:</strong> Recibí tu mensaje. ¿Cómo puedo ayudarte más?</p>`;
+          document.querySelector(".chat-messages").appendChild(botReply);
+        }, 1000);
+        
+        // Scroll to the latest message
+        const chatMessages = document.querySelector(".chat-messages");
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    }
+  </script>
+
+</body>
+</html>

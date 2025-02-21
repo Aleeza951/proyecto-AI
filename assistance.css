@@ -1,251 +1,157 @@
-/* General Reset */
-* {
+/* Estilo general para el cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan dentro del tamaño total */
+  color: #333;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
+/* Contenedor principal */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /* Header */
 .header {
-  background-color: #005f73; /* Color de fondo */
-  color: white; /* Color del texto */
-  text-align: center; /* Centrar el texto */
-  padding: 2em; /* Espaciado interno */
-  width: 100%; /* Asegura que cubra todo el ancho */
-  height: 20vh; /* Hace que ocupe toda la altura de la ventana */
-  position: relative; /* Asegura que el header no se desplace o afecte a otros elementos */
-  top: 0;
-  left: 0;
-}
-
-.main-content {
-  text-align: center;
-  padding: 2em;
-  font-family: Arial, sans-serif;
-}
-
-.main-content h2 {
-  font-size: 2rem;
-  margin-bottom: 1em;
-}
-
-.main-content ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.main-content ul li {
-  font-size: 1.2rem;
-  margin: 10px 0;
-}
-
-.go-back-container {
-  margin-top: 2em;
-}
-
-.back-btn {
-  padding: 10px 20px;
-  background-color: #00aaff;
+  background-color: #005f73;
   color: white;
-  border: none;
-  border-radius: 5px;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.header p {
+  font-size: 18px;
+  margin: 10px 0 0;
+}
+
+/* Main Content */
+.main-content {
+  padding: 40px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.options h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 30%;
+  min-width: 250px;
   cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.back-btn:hover {
-  background-color: #0088cc;
-}
-
-/* General styling for card 1 */
-.card1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas por defecto */
-  gap: 20px; /* Espacio entre las tarjetas */
-  padding: 2em;
-  justify-items: center; /* Alinea las tarjetas al centro */
-}
-
-/* Para pantallas pequeñas */
-@media (max-width: 768px) {
-  .card1 {
-    grid-template-columns: 1fr; /* Una columna para pantallas pequeñas */
-    padding: 1em; /* Menos espacio */
-  }
-}
-
-/* Estilo de la tarjeta */
-.card1 {
-  width: 100%;
-  max-width: 300px; /* Máximo tamaño de la tarjeta */
-  background-color: #ffffff;
-  padding: 1.5em;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
 }
 
-/* Efecto hover en la tarjeta */
-.card1:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card1 img {
-  width: 80px; /* Tamaño de las imágenes */
-  margin-bottom: 15px;
+.card-img {
+  width: 60px;
+  margin-bottom: 20px;
 }
 
-.card1 h3 {
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.card1 p {
-  font-size: 1rem;
-  color: #666;
-}
-
-
-
-/* General styling for card 2 */
-.card2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas por defecto */
-  gap: 20px; /* Espacio entre las tarjetas */
-  padding: 2em;
-  justify-items: center; /* Alinea las tarjetas al centro */
-}
-
-/* Para pantallas pequeñas */
-@media (max-width: 768px) {
-  .card2 {
-    grid-template-columns: 1fr; /* Una columna para pantallas pequeñas */
-    padding: 1em; /* Menos espacio */
-  }
-}
-
-/* Estilo de la tarjeta */
-.card2 {
-  width: 100%;
-  max-width: 300px; /* Máximo tamaño de la tarjeta */
-  background-color: #ffffff;
-  padding: 1.5em;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-}
-
-/* Efecto hover en la tarjeta */
-.card2:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
-
-.card2 img {
-  width: 80px; /* Tamaño de las imágenes */
-  margin-bottom: 15px;
-}
-
-.card2 h3 {
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.card2 p {
-  font-size: 1rem;
-  color: #666;
-}
-
-
-
-/* General styling for card 3 */
-.card3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas por defecto */
-  gap: 20px; /* Espacio entre las tarjetas */
-  padding: 2em;
-  justify-items: center; /* Alinea las tarjetas al centro */
-}
-
-/* Para pantallas pequeñas */
-@media (max-width: 768px) {
-  .card3 {
-    grid-template-columns: 1fr; /* Una columna para pantallas pequeñas */
-    padding: 1em; /* Menos espacio */
-  }
-}
-
-/* Estilo de la tarjeta */
-.card3 {
-  width: 100%;
-  max-width: 300px; /* Máximo tamaño de la tarjeta */
-  background-color: #ffffff;
-  padding: 1.5em;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-}
-
-/* Efecto hover en la tarjeta */
-.card3:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
-
-.card3 img {
-  width: 80px; /* Tamaño de las imágenes */
-  margin-bottom: 15px;
-}
-
-.card3 h3 {
-  font-size: 1.5rem;
-  color: #333;
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
 .card p {
-  font-size: 1rem;
-  color: #666;
+  font-size: 16px;
 }
+
+/* Sección de opciones de ayuda */
+.help-options h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.help-options ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.help-options ul li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Contenedor del botón de regreso */
+.go-back-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-btn {
+  background-color: #005f73;
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
 /* Footer */
 .footer {
   background-color: #333;
   color: white;
+  padding: 40px 20px;
   text-align: center;
-  padding: 30px 0;
-  font-family: Arial, sans-serif;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  border-radius: 8px;
+  margin-top: 50px;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 20px; /* Agrega espacio entre las secciones del footer */
+  gap: 40px;
 }
 
 .footer-section {
   flex: 1;
-  margin: 20px;
+  max-width: 250px;
+  margin-bottom: 20px;
 }
 
 .footer-section h3 {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
@@ -255,56 +161,40 @@ body, html {
 }
 
 .footer-section ul li {
+  font-size: 16px;
   margin: 5px 0;
 }
 
-.footer-section ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-  text-decoration: underline;
-}
-
 .footer-bottom {
+  margin-top: 30px;
   font-size: 14px;
-  margin-top: 20px;
 }
 
-/* Media Queries */
+/* Responsive */
 @media (max-width: 768px) {
-  /* Ajustes para la sección de las tarjetas */
   .cards {
-    flex-direction: column; /* Organiza las tarjetas en columna en pantallas pequeñas */
-    align-items: center; /* Centra las tarjetas verticalmente */
+    flex-direction: column;
+    align-items: center;
   }
 
-  .card {
-    width: 90%; /* Ajusta el tamaño de la tarjeta al 90% del ancho de la pantalla */
-    max-width: 300px; /* Limita el tamaño máximo de las tarjetas */
-  }
-
-  /* Ajustes en el header */
-  .header h1 {
-    font-size: 1.8em;
-  }
-
-  .header p {
-    font-size: 1em;
-  }
-
-  /* Ajustes en el footer */
   .footer-content {
-    flex-direction: column; /* Alinea los elementos del footer en columna */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Contenedores de footer se apilan en pantallas pequeñas */
+  .footer-content,
+  .footer-section {
+    width: 100%;
     text-align: center;
   }
 
-  .footer-section {
-    margin: 15px 0;
+  /* Ajustes para el texto en header */
+  .header h1 {
+    font-size: 28px;
   }
 
-  .footer-bottom {
-    font-size: 0.8em;
+  .header p {
+    font-size: 16px;
   }
 }

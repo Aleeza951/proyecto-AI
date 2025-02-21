@@ -5,27 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Chatbot</title>
   <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
-
-
+  <script src="main.js" defer></script>
 </head>
 <body>
-
   <!-- Header -->
   <header class="header">
-    <div class="image">
-      <!-- Al hacer clic en la imagen se activa la animación -->
+    <div class="image" id="imageContainer">
+      <img src="robot.jpg" alt="Chatbot Robot" id="chatbotImage">
     </div>
-  
-      <div class="image" onmouseover="animateImage(this)" onmouseout="resetImage(this)">
-        <img src="robot.jpg" alt="robot.jpg" id="chatbotImage">
-      </div>
-      <h1>Bienvenido AI Chatbot</h1>
-      <p>Tu asistente virtual inteligente siempre a tu disposición.</p>
-    </header>
+    <h1>Bienvenido AI Chatbot</h1>
+    <p>Tu asistente virtual inteligente siempre a tu disposición.</p>
+  </header>
 
   <!-- Secciones de la página -->
-   
   <div class="features">
     <section class="feature" onclick="window.location.href='assistance.html';">
       <img src="https://cdn-icons-png.flaticon.com/512/2712/2712025.png" alt="Speech Bubble Sticker" class="speech-bubble-sticker">
@@ -35,7 +27,7 @@
 
     <section class="feature" onclick="window.location.href='smart.html';">
       <img src="https://cdn-icons-png.flaticon.com/512/3086/3086099.png" alt="AI Brain Network Sticker" class="network-sticker">   
-         <h2>Smart Assistance</h2>
+      <h2>Smart Assistance</h2>
       <p>Automatiza tareas con nuestro chatbot inteligente.</p>
     </section>
 
@@ -47,10 +39,9 @@
   </div>
 
   <!-- Botón Start Chat -->
-<div class="start-chat-container">
-  <button class="start-chat-btn" onclick="window.location.href='chat.html'">Start Chat</button>
-</div>
-
+  <div class="start-chat-container">
+    <button class="start-chat-btn" onclick="window.location.href='chat.html'">Start Chat</button>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -66,7 +57,7 @@
           <li><a href="/home">Home</a></li>
           <li><a href="/contact">Contact Us</a></li>
           <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/terms">Terms &and Conditions</a></li>
+          <li><a href="/terms">Terms & Conditions</a></li>
         </ul>
       </div>
   
@@ -85,9 +76,8 @@
       <p>Designed by ❤ ALEEZA SAJID</p>
     </div>
   </footer>
-  
+
   <script>
-    // Función de animación para la imagen
     function animateImage() {
       const img = document.getElementById("chatbotImage");
       img.style.transition = "transform 0.5s";
@@ -96,11 +86,15 @@
         img.style.transform = "scale(1)";
       }, 500);
     }
+
+    function resetImage() {
+      const img = document.getElementById("chatbotImage");
+      img.style.transform = "scale(1)";
+    }
+
+    const imageContainer = document.getElementById("imageContainer");
+    imageContainer.addEventListener("mouseover", animateImage);
+    imageContainer.addEventListener("mouseout", resetImage);
   </script>
 </body>
 </html>
-
-
-
-
-

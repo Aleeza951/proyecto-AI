@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quick Assistance</title>
   <link rel="stylesheet" href="assistance.css">
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </head>
 <body>
 
@@ -15,64 +15,72 @@
     <p>Recibe ayuda instantánea para resolver tus problemas rápidamente.</p>
   </header>
 
-    <main class="main-content">
-      <section class="options">
-        <h2>What do you need help with?</h2>
-        <div class="cards">
-          
-          <div class="card1" onclick="window.location.href='faq.html'">
-            <img src="https://cdn-icons-png.flaticon.com/512/3242/3242257.png" alt="FAQs">
-                                                                          
-            <div class="card2" onclick="window.location.href='live_chat.html'">
-              <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Live Chat">
-              <h3>Live Chat</h3>
-              <p>Connect with our support team for personalized help.</p>
-            </div>
-            
-  
-          <div class="card3" onclick="window.location.href='resources.html'">
-            <img src="https://cdn-icons-png.flaticon.com/512/3225/3225195.png" alt="Resources">
-            <h3>Resources</h3>
-            <p>Access guides, tools, and more to assist you.</p>
-          </div>
-        </div>
-        </div>
-      </section>
-    </main>
-  <!-- Sección de Asistencia Rápida -->
-  <div class="main-content">
-    <h2>¿Cómo podemos ayudarte?</h2>
-    <p>Contamos con diversas opciones para darte respuestas rápidas a tus preguntas más frecuentes.</p>
-    <ul>
-      <li><strong>Asistencia Técnica:</strong> Resolver problemas técnicos al instante.</li>
-      <li><strong>Preguntas Frecuentes:</strong> Respuestas rápidas a preguntas comunes.</li>
-      <li><strong>Soporte de Cuenta:</strong> Ayuda con la gestión de tu cuenta.</li>
-    </ul>
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="options">
+      <h2>What do you need help with?</h2>
+      <div class="cards">
 
-    <!-- Botón para regresar -->
+        <!-- Card 1 - FAQ -->
+        <div class="card" onclick="window.location.href='faq.html'">
+          <img src="https://cdn-icons-png.flaticon.com/512/3242/3242257.png" alt="FAQs" class="card-img">
+          <h3>FAQs</h3>
+          <p>Respuestas rápidas a tus preguntas frecuentes.</p>
+        </div>
+
+      <!-- Card 2 - Live Chat -->
+        <div class="card" onclick="window.location.href='livechat.html'">
+         <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Live Chat" class="card-img">
+         <h3>Live Chat</h3>
+         <p>Conecta con nuestro equipo de soporte para ayuda personalizada.</p>
+        </div>
+
+     <!-- Card 3 - Resources -->
+<div class="card" onclick="window.location.href='resourcesPage.html'">
+  <img src="https://cdn-icons-png.flaticon.com/512/3225/3225195.png" alt="Resources" class="card-img">
+  <h3>Resources</h3>
+  <p>Accede a guías, herramientas y más para ayudarte.</p>
+</div>
+
+
+      </div>
+    </section>
+
+    <!-- Help Options -->
+    <section class="help-options">
+      <h2>¿Cómo podemos ayudarte?</h2>
+      <p>Contamos con diversas opciones para darte respuestas rápidas a tus preguntas más frecuentes.</p>
+      <ul>
+        <li><strong>Asistencia Técnica:</strong> Resolver problemas técnicos al instante.</li>
+        <li><strong>Preguntas Frecuentes:</strong> Respuestas rápidas a preguntas comunes.</li>
+        <li><strong>Soporte de Cuenta:</strong> Ayuda con la gestión de tu cuenta.</li>
+      </ul>
+    </section>
+
+    <!-- Button to Go Back -->
     <div class="go-back-container">
       <button class="back-btn" onclick="window.location.href='index.html'">Regresar</button>
     </div>
-  </div>
+  </main>
 
   <!-- Footer -->
- <footer class="footer">
+  <footer class="footer">
     <div class="footer-content">
       <div class="footer-section">
         <h3>AI Chatbot</h3>
         <p>&copy; 2024 AI Chatbot Inc. All rights reserved.</p>
       </div>
-  
+
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
           <li><a href="/home">Home</a></li>
           <li><a href="/contact">Contact Us</a></li>
           <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/terms">Terms &and Conditions</a></li>
+          <li><a href="/terms">Terms & Conditions</a></li>
         </ul>
       </div>
-  
+
       <div class="footer-section">
         <h3>Follow Us</h3>
         <ul>
@@ -88,5 +96,6 @@
       <p>Designed by ❤ ALEEZA SAJID</p>
     </div>
   </footer>
+
 </body>
 </html>
