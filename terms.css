@@ -69,7 +69,28 @@ body {
     margin-bottom: 15px;
     font-weight: 300;
   }
-  
+  /* Botón de Home */
+.home-btn {
+  display: inline-block;
+  background-color: #014f61;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  width: 10%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  position: relative;
+  bottom: 4rem;
+  left: 40rem;
+}
+
+.home-btn:hover {
+  background-color: #0D4F4F;
+}
+
   /* Estilos para el pie de página (footer) */
   footer {
     background-color: #005f73;
@@ -98,18 +119,38 @@ body {
     text-decoration: underline;
   }
   
-  /* Estilos responsivos */
-  @media (max-width: 768px) {
-    .terms-section {
-      width: 90%;
-    }
-  
-    header h1 {
+
+  /* Para tabletas */
+@media (max-width: 768px) {
+  header h1 {
       font-size: 2.5em;
-    }
-  
-    header p {
-      font-size: 1.1em;
-    }
   }
-  
+  .terms-section {
+      width: 90%;
+      padding: 20px;
+  }
+  .home-btn {
+      width: 20%;
+      bottom: 2rem;
+      left: 40%;
+  }
+}
+
+/* Para móviles */
+@media (max-width: 480px) {
+  header {
+      padding: 30px 10px;
+  }
+  header h1 {
+      font-size: 2em;
+  }
+  .terms-section {
+      width: 100%;
+      padding: 15px;
+  }
+  .home-btn {
+      width: 20%;
+      bottom: 1rem;
+      left: 40%;
+  }
+}

@@ -69,7 +69,28 @@ body {
     margin-bottom: 15px;
     font-weight: 300;
   }
-  
+  /* Botón de Home */
+.home-btn {
+  display: inline-block;
+  background-color: #014f61;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  width: 10%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  position: relative;
+  bottom: 4rem;
+  left: 40rem;
+}
+
+.home-btn:hover {
+  background-color: #0D4F4F;
+}
+
   /* Footer */
   footer {
     background-color: #005f73; /* Mismo color para el pie de página */

@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --main-bg-color:#2c3e50;
+}
+body {
+  background-color: var(--main-bg-color);
+}
 
 /* Fuentes y base */
 body {
@@ -11,6 +17,7 @@ body {
   color: #333;
   line-height: 1.6;
   overflow-x: hidden;
+  background-color: var(--main-bg-color, white);
 }
 
 /* Header */
@@ -21,6 +28,7 @@ body {
   color: white;
   border-bottom: 5px solid #3498db;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: var(--main-bg-color, #f8f9fa);
 }
 
 .header h1 {
@@ -116,6 +124,155 @@ body {
   background-color: #357ab7;
   transform: scale(1.05); /* Añadir un pequeño zoom */
 }
+.settings-icon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.settings-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.settings-icon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Modal Styles */
+.settings-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Slightly darker for better contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Settings content */
+.settings-content {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px; /* More rounded corners */
+  text-align: left;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3); /* Softer shadow */
+  max-width: 400px; /* Slightly larger width */
+  width: 85%;
+  font-size: 16px;
+  color: #555;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.settings-content h2 {
+  font-size: 24px; /* Larger title for emphasis */
+  color: #4a90e2; /* Consistent with the button color */
+  margin-bottom: 20px; /* Increased margin for spacing */
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* List items in settings */
+.settings-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.settings-content ul li {
+  margin: 20px 0; /* Increased margin for spacing */
+}
+
+.settings-content ul li button {
+  width: 30%;
+  padding: 15px; /* Larger padding for a bolder look */
+  background: linear-gradient(145deg, #4a90e2, #357ab7);
+  color: white;
+  border: none;
+  border-radius: 12px; /* More rounded corners */
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.settings-content ul li button:hover {
+  background: linear-gradient(145deg, #357ab7, #4a90e2);
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.settings-section {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.settings-section:last-child {
+  border-bottom: none;
+}
+
+.settings-section strong {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+#bgColorPicker {
+  margin-top: 10px;
+  padding: 10px 5px;
+  border-radius: 10px; /* Rounded input */
+  background-color: #f1f1f1;
+  transition: all 0.3s ease;
+  border: 2px solid #ccc;
+}
+
+#bgColorPicker:focus {
+  border-color: #4a90e2;
+  background-color: #e8f4fd;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Close button styling */
+.close-settings-btn {
+  background: #e74c3c;
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px; /* Rounded button */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 50%;
+  margin-top: 20px;
+}
+
+.close-settings-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
 
 /* Footer */
 .footer {
@@ -123,6 +280,7 @@ body {
   color: #fff;
   padding: 30px 0;
   text-align: center;
+  background-color: var(--main-bg-color, #343a40);
 }
 
 .footer-content {

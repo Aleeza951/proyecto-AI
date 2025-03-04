@@ -42,6 +42,49 @@
   <div class="start-chat-container">
     <button class="start-chat-btn" onclick="window.location.href='chat.html'">Start Chat</button>
   </div>
+  <!-- Botón de configuración en la esquina superior derecha -->
+<button id="settings-btn" class="settings-icon">⚙️</button>
+
+<!-- Modal de configuración -->
+<div id="settings-modal" class="settings-modal hidden">
+  <div class="settings-content">
+    <h2>App Settings</h2>
+
+    <!-- Default Section: Colors -->
+    <div class="settings-section">
+      <strong>Defaults:</strong>
+      <ul>
+        <li>
+          <label for="bgColorPicker">Change Background Color:</label>
+          <input type="color" id="bgColorPicker">
+        </li>
+      </ul>
+    </div>
+
+    <!-- Account Section: Sign Up & Login -->
+    <div class="settings-section">
+      <strong>Account:</strong>
+      <ul>
+        <!-- Link to Signup Page -->
+        <li><a href="signup.html"><button>Sign Up</button></a></li>
+        <!-- Link to Login Page -->
+        <li><a href="login.html"><button>Login</button></a></li>
+      </ul>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="settings-section">
+      <strong>Profile:</strong>
+      <ul>
+        <li><button>Profile Settings</button></li>
+      </ul>
+    </div>
+
+    <!-- Close Button -->
+    <button id="close-settings" class="close-settings-btn">Cerrar</button>
+  </div>
+</div>
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -95,6 +138,25 @@
     const imageContainer = document.getElementById("imageContainer");
     imageContainer.addEventListener("mouseover", animateImage);
     imageContainer.addEventListener("mouseout", resetImage);
+
+    // Funcionalidad para abrir y cerrar la ventana modal de configuración
+    const settingsBtn = document.getElementById('settings-btn');
+    const settingsModal = document.getElementById('settings-modal');
+    const closeSettingsBtn = document.getElementById('close-settings');
+
+    // Mostrar y ocultar la ventana de configuración
+    settingsBtn.addEventListener('click', () => {
+      settingsModal.classList.toggle('hidden');
+    });
+
+    closeSettingsBtn.addEventListener('click', () => {
+      settingsModal.classList.add('hidden');
+    });
+    bgColorPicker.addEventListener('input', (event) => {
+  document.documentElement.style.setProperty('--main-bg-color', event.target.value || 'blue');
+});
+
+
   </script>
 </body>
 </html>

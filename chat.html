@@ -3,50 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat Page</title>
-  <link rel="stylesheet" href="chat.css"> 
+  <link rel="stylesheet" href="chat.css">
+  <title>Chatbot with Voice</title>
+  <style>
+    /* Agrega tu CSS aquí */
+  </style>
 </head>
 <body>
-  <!-- Chat Header -->
   <div class="chat-header">
     AI Chat Assistant
   </div>
 
-  <!-- Chat Container -->
   <div class="chat-container" id="chatContainer">
-    <!-- Mensaje inicial del bot -->
     <div class="message bot">Hello! How can I assist you today?</div>
   </div>
 
-  <!-- Input Area -->
   <div class="input-container">
     <input type="text" id="messageInput" placeholder="Type your message...">
     <button onclick="sendMessage()">Send</button>
   </div>
 
-  <!-- Script para manejar interacciones -->
   <script>
     function sendMessage() {
       const input = document.getElementById("messageInput");
       const chatContainer = document.getElementById("chatContainer");
-
-      // Obtener el mensaje del usuario
       const userMessage = input.value.trim();
-      if (userMessage === "") return; // Evitar mensajes vacíos
+      if (userMessage === "") return;
 
-      // Crear el mensaje del usuario y agregarlo al contenedor
       const userMessageElement = document.createElement("div");
       userMessageElement.className = "message user";
       userMessageElement.textContent = userMessage;
       chatContainer.appendChild(userMessageElement);
-
-      // Desplazar la vista hacia el último mensaje
       chatContainer.scrollTop = chatContainer.scrollHeight;
 
-      // Limpiar el campo de entrada
       input.value = "";
 
-      // Simular respuesta del bot con un retraso
       setTimeout(() => {
         const botMessageElement = document.createElement("div");
         botMessageElement.className = "message bot";
@@ -55,34 +46,22 @@
         chatContainer.scrollTop = chatContainer.scrollHeight;
       }, 1000);
     }
-        // Iniciar entrada de voz (reconocimiento de voz)
-        function startVoiceInput() {
-      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-      recognition.lang = "en-US"; // Configurar idioma inglés
 
+    function startVoiceInput() {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = "en-US";
       recognition.start();
 
       recognition.onresult = (event) => {
-        const transcript = event.results[0][0].transcript; // Obtener el texto reconocido
+        const transcript = event.results[0][0].transcript;
         document.getElementById("messageInput").value = transcript;
-        sendMessage(); // Enviar automáticamente el mensaje
+        sendMessage();
       };
 
       recognition.onerror = (error) => {
-        alert("Error in voice input: " + error.error); // Manejo de errores
+        alert("Error in voice input: " + error.error);
       };
-    }
-
-    // Convertir texto a voz (síntesis de voz)
-    function speakText(text) {
-      const speech = new SpeechSynthesisUtterance();
-      speech.text = text;
-      speech.lang = "en-US"; // Configurar idioma inglés
-      speech.pitch = 1;
-      speech.rate = 1;
-      window.speechSynthesis.speak(speech);
     }
   </script>
 </body>
 </html>
-
