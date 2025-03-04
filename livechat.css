@@ -122,44 +122,20 @@ body {
     background-color: #0056b3;
   }
   
-  /* Footer */
-  .footer {
-    background-color: #333;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-  
-  .footer-section {
-    flex: 1;
-    max-width: 250px;
-    margin-bottom: 20px;
-  }
-  
-  .footer-section h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li {
-    font-size: 16px;
-    margin: 5px 0;
-  }
-  
-  .footer-bottom {
-    margin-top: 30px;
-    font-size: 14px;
-  }
+  /* Footer Estilo */
+.footer {
+  background-color: #333; /* Color de fondo negro */
+  color: white; /* Texto blanco */
+  padding: 20px 0; /* Espaciado */
+  width: 100%; /* Ancho completo */
+  position: relative;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
   

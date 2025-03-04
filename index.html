@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Chatbot</title>
   <link rel="stylesheet" href="style.css">
-  <script src="main.js" defer></script>
 </head>
 <body>
   <!-- Header -->
@@ -42,49 +41,58 @@
   <div class="start-chat-container">
     <button class="start-chat-btn" onclick="window.location.href='chat.html'">Start Chat</button>
   </div>
+
   <!-- Botón de configuración en la esquina superior derecha -->
-<button id="settings-btn" class="settings-icon">⚙️</button>
+  <button id="settings-btn" class="settings-icon">⚙️</button>
 
-<!-- Modal de configuración -->
-<div id="settings-modal" class="settings-modal hidden">
-  <div class="settings-content">
-    <h2>App Settings</h2>
-
-    <!-- Default Section: Colors -->
-    <div class="settings-section">
-      <strong>Defaults:</strong>
-      <ul>
-        <li>
-          <label for="bgColorPicker">Change Background Color:</label>
-          <input type="color" id="bgColorPicker">
-        </li>
-      </ul>
+  <!-- Modal de configuración -->
+  <div id="settings-modal" class="settings-modal hidden">
+    <div class="settings-content">
+      <h2>App Settings</h2>
+      <div class="settings-section">
+        <strong>Defaults:</strong>
+        <ul>
+          <li>
+            <label for="bgColorPicker">Change Background Color:</label>
+            <input type="color" id="bgColorPicker">
+          </li>
+        </ul>
+      </div>
+      <div class="settings-section">
+        <strong>Account:</strong>
+        <ul>
+          <li><a href="signup.html"><button>Sign Up</button></a></li>
+          <li><a href="login.html"><button>Login</button></a></li>
+        </ul>
+      </div>
+      <button id="close-settings" class="close-settings-btn">Cerrar</button>
     </div>
-
-    <!-- Account Section: Sign Up & Login -->
-    <div class="settings-section">
-      <strong>Account:</strong>
-      <ul>
-        <!-- Link to Signup Page -->
-        <li><a href="signup.html"><button>Sign Up</button></a></li>
-        <!-- Link to Login Page -->
-        <li><a href="login.html"><button>Login</button></a></li>
-      </ul>
-    </div>
-
-    <!-- Profile Section -->
-    <div class="settings-section">
-      <strong>Profile:</strong>
-      <ul>
-        <li><button>Profile Settings</button></li>
-      </ul>
-    </div>
-
-    <!-- Close Button -->
-    <button id="close-settings" class="close-settings-btn">Cerrar</button>
   </div>
-</div>
 
+  <!-- Icono de perfil en la esquina superior izquierda -->
+  <a href="profile.html" id="profile-icon">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile Icon" class="profile-icon">
+  </a>
+
+  <!-- Modal de perfil -->
+  <div id="profile-modal" class="settings-modal hidden">
+    <div class="settings-content">
+      <h2>Perfil</h2>
+      <div class="profile-section">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" value="Aleeza Sajid" disabled>
+      </div>
+      <div class="profile-section">
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" value="aleeza@example.com" disabled>
+      </div>
+      <div class="profile-section">
+        <button id="edit-profile">Editar</button>
+        <button id="save-profile">Guardar</button>
+      </div>
+      <button id="close-profile" class="close-settings-btn">Cerrar</button>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -93,7 +101,6 @@
         <h3>AI Chatbot</h3>
         <p>&copy; 2024 AI Chatbot Inc. All rights reserved.</p>
       </div>
-  
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
@@ -103,7 +110,6 @@
           <li><a href="terms.html">Terms and Conditions</a></li>
         </ul>
       </div>
-  
       <div class="footer-section">
         <h3>Follow Us</h3>
         <ul>
@@ -139,12 +145,10 @@
     imageContainer.addEventListener("mouseover", animateImage);
     imageContainer.addEventListener("mouseout", resetImage);
 
-    // Funcionalidad para abrir y cerrar la ventana modal de configuración
     const settingsBtn = document.getElementById('settings-btn');
     const settingsModal = document.getElementById('settings-modal');
     const closeSettingsBtn = document.getElementById('close-settings');
 
-    // Mostrar y ocultar la ventana de configuración
     settingsBtn.addEventListener('click', () => {
       settingsModal.classList.toggle('hidden');
     });
@@ -152,11 +156,22 @@
     closeSettingsBtn.addEventListener('click', () => {
       settingsModal.classList.add('hidden');
     });
+
     bgColorPicker.addEventListener('input', (event) => {
-  document.documentElement.style.setProperty('--main-bg-color', event.target.value || 'blue');
-});
+      document.documentElement.style.setProperty('--main-bg-color', event.target.value || 'blue');
+    });
+    const profileIcon = document.getElementById('profile-icon');
+  const profileModal = document.getElementById('profile-modal');
+  const closeProfileBtn = document.getElementById('close-profile');
 
+  // Mostrar y ocultar modal de perfil
+  profileIcon.addEventListener('click', () => {
+    profileModal.classList.toggle('hidden');
+  });
 
+  closeProfileBtn.addEventListener('click', () => {
+    profileModal.classList.add('hidden');
+  });
   </script>
 </body>
 </html>

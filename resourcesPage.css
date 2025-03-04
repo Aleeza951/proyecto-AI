@@ -27,7 +27,7 @@ body {
   
   /* Header */
   .header {
-    background-color: #2980b9;
+    background-color: #005f73;
     color: white;
     text-align: center;
     padding: 30px 20px;
@@ -92,44 +92,18 @@ body {
     font-size: 1rem;
   }
   
-  /* Footer */
-  .footer {
-    background-color: #2980b9;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    position: relative;
-  }
-  
-  .footer p {
-    margin: 0;
-    font-size: 1rem;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .header h1 {
-      font-size: 2rem;
-    }
-  
-    .header p {
-      font-size: 1rem;
-    }
-  
-    .resources-list {
-      grid-template-columns: 1fr;
-      padding: 20px;
-    }
-  
-    .resources-list a {
-      padding: 15px;
-    }
-  
-    .footer p {
-      font-size: 0.9rem;
-    }
-  }
-  
+  /* Footer Estilo */
+.footer {
+  background-color: #333; /* Color de fondo negro */
+  color: white; /* Texto blanco */
+  padding: 20px 0; /* Espaciado */
+  width: 100%; /* Ancho completo */
+  position: relative;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+}

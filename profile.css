@@ -1,0 +1,107 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.profile-container {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+/* Avatar */
+.avatar-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    border: 3px solid white;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+}
+
+.change-avatar-text {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    display: none;
+}
+
+.avatar-container:hover .change-avatar-text {
+    display: block;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Estilo de formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Botón */
+button {
+    padding: 10px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+}

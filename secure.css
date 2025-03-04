@@ -20,7 +20,7 @@ body {
   background: linear-gradient(135deg, #006d77, #83c5be); /* Gradiente atractivo */
   color: white;
   text-align: center;
-  padding: 5em 1.5em; /* Espaciado más amplio */
+  padding: 5rem 1.5em; /* Espaciado más amplio */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -70,6 +70,8 @@ body {
     text-align: center;
     padding: 2em;
     font-family: Arial, sans-serif;
+    position: relative;
+    bottom: 3rem;
   }
   
   .main-content h2 {
@@ -111,46 +113,6 @@ body {
     padding: 20px 0; /* Espaciado */
     width: 100%; /* Ancho completo */
     position: relative;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 1200px; /* Para limitar el ancho del contenido */
-    margin: 0 auto; /* Centrar contenido */
-  }
-  
-  .footer-section {
-    flex: 1;
-    margin: 10px;
-    min-width: 150px; /* Asegurar tamaño mínimo de las secciones */
-    text-align: center;
-  }
-  
-  .footer-section h3 {
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-size: 1rem;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li {
-    margin: 5px 0;
-  }
-  
-  .footer-section ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .footer-section ul li a:hover {
-    color: #1d9bf0; /* Azul claro al pasar */
   }
   
   .footer-bottom {
